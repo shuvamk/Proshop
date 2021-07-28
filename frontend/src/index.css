@@ -1,6 +1,15 @@
 main {
   min-height: 80vh;
 }
+
+h3 {
+  padding: 1rem 0rem;
+}
+
 .ml-auto {
   margin-left: auto;
+}
+
+.rating span {
+  margin: 0.1rem;
 }
