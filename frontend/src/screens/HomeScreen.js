@@ -10,6 +10,8 @@ import {
 } from 'react-redux';
 
 import { listProducts } from '../actions/productActions';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 import Product from '../components/Product';
 
 const HomeScreen = () => {
@@ -24,9 +26,9 @@ const HomeScreen = () => {
     <>
       <h1>Latest Products</h1>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loader />
       ) : error ? (
-        <h2>Error occurres {error}</h2>
+        <Message variant="danger">{error}</Message>
       ) : (
         <Row>
           {products.map((product) => (
