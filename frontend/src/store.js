@@ -6,6 +6,7 @@ import {
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
+import { cartReducer } from './reducers/cartReducers';
 import {
   productDetailsReducer,
   productListReducer,
@@ -14,6 +15,7 @@ import {
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
+  cart: cartReducer,
 });
 const initialState = {};
 const middleware = [thunk];
